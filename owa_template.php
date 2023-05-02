@@ -670,7 +670,7 @@ class owa_template extends Template {
                 $k = $reserved_words[$k];
             }
 
-            $json .= sprintf('%s: "%s", ', $k, $v);
+            $json .= sprintf('%s: "%s", ', $k, htmlspecialchars($v, ENT_QUOTES));
 
         }
 
